@@ -14,8 +14,6 @@ type Propagator interface {
 	InjectIntoGRPCRequest(ctx context.Context) (context.Context, error)
 }
 
-var propagator Propagator = NewOrgIDPropagator()
-
 func NewOrgIDPropagator() *orgIDPropagator {
 	return &orgIDPropagator{}
 }
